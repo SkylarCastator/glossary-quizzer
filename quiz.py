@@ -5,15 +5,20 @@ import pyfiglet
 
 
 class Quiz:
-    def __init__(self):
-        pass
+    def __init__(self, glossary_terms):
+        print(f"The Quiz contains {len(glossary_terms)} items.")
+        print("")
+        self.question_num = 1
+        self.original_set = glossary_terms
+        self.quiz_set = glossary_terms
+        self.incorrect_answers = []
 
     def generate_definition_question(self):
-        random_term = random.choice(glossary_terms)
+        random_term = random.choice(self.quiz_set)
         question = f"Given the definition, what is the correct term?"
         question_prompt = random_term['definition']
         options = self.generate_term_options(random_term['term'])
-        print(question)
+        print(f"{self.question_num}. {question}")
         print(question_prompt)
         print("")
         terminal_menu = TerminalMenu(options)
@@ -28,15 +33,19 @@ class Quiz:
         else:
             print("Incorrect!")
             print(f"The correct answer is: {random_term['term']}")
+            self.incorrect_answers.append(random_term)
         print("")
-        self.generate_definition_question()
+        self.quiz_set.remove(random_term)
+        self.question_num += 1
+        self.active_quiz_data()
+        self.question_menu()
 
     def generate_term_options(self, correct_option):
         options = [correct_option]
 
         # Generate three incorrect options randomly from other glossary terms
         while len(options) < 4:
-            random_term = random.choice(glossary_terms)
+            random_term = random.choice(self.original_set)
             random_definition = random_term['term']
             if random_definition not in options:
                 options.append(random_definition)
@@ -46,10 +55,10 @@ class Quiz:
         return options
 
     def generate_question(self):
-        random_term = random.choice(glossary_terms)
+        random_term = random.choice(self.quiz_set)
 
         # Prompt user with a multiple-choice question
-        question = f"What does '{random_term['term']}' mean?"
+        question = f"{self.question_num}. What does '{random_term['term']}' mean?"
         options = self.generate_options(random_term['definition'])
         print(question)
         print("")
@@ -65,15 +74,20 @@ class Quiz:
         else:
             print("Incorrect!")
             print(f"The correct answer is: {random_term['definition']}")
+            self.incorrect_answers.append(random_term)
         print("")
-        self.generate_question()
+        self.quiz_set.remove(random_term)
+        self.question_num += 1
+        self.active_quiz_data()
+        self.question_menu()
+        #self.generate_question()
 
     def generate_options(self, correct_option):
         options = [correct_option]
 
         # Generate three incorrect options randomly from other glossary terms
         while len(options) < 4:
-            random_term = random.choice(glossary_terms)
+            random_term = random.choice(self.original_set)
             random_definition = random_term['definition']
             if random_definition not in options:
                 options.append(random_definition)
@@ -82,13 +96,24 @@ class Quiz:
         random.shuffle(options)
         return options
 
+    def question_menu(self):
+        options = ["Continue", "Quit"]
+        terminal_menu = TerminalMenu(options)
+        selected_option_index = terminal_menu.show()
+        selected_option = options[selected_option_index]
+        if selected_option == "Quit":
+            exit()
+        else:
+            self.generate_definition_question()
 
-# Load the glossary terms from the JSON file
-with open('glossary_data/cg_glossary.json', 'r') as json_file:
-    data = json.load(json_file)
-    glossary_terms = data['glossary']
+    def active_quiz_data(self):
+        quiz_name = "computer_graphics"
+        quiz_data = {
+            "quiz_data_path": quiz_name,
+            "questions_remaining": self.quiz_set,
+            "questions_incorrectly_answered": self.incorrect_answers
+        }
+        with open(f'temp/{quiz_name}.json', 'w') as json_file:
+            json.dump(quiz_data, json_file, indent=4)
 
-ascii_banner = pyfiglet.figlet_format("Quizzer")
-print(ascii_banner)
-quiz = Quiz()
-quiz.generate_definition_question()
+

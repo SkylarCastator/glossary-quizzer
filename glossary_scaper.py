@@ -18,12 +18,3 @@ def scrape_glossary_terms(url):
 
     return terms
 
-# URL of the Wikipedia page
-url = 'https://en.wikipedia.org/wiki/Glossary_of_computer_science'
-
-# Scrape the glossary terms
-glossary_terms = scrape_glossary_terms(url)
-
-# Save the glossary terms as a JSON file
-with open('glossary_data/cs_glossary.json', 'w') as json_file:
-    json.dump({'glossary': glossary_terms}, json_file, indent=4)
