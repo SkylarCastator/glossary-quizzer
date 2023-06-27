@@ -1,0 +1,1068 @@
+{
+    "glossary": [
+        {
+            "term": "2D convolution",
+            "definition": "Operation that applies linear filtering to image with a given two-dimensional kernel, able to achieve e.g. edge detection, blurring, etc."
+        },
+        {
+            "term": "2D image",
+            "definition": "A texture map with two dimensions, typically indexed by UV coordinates."
+        },
+        {
+            "term": "2D texture map",
+            "definition": "A texture map with two dimensions, typically indexed by UV coordinates."
+        },
+        {
+            "term": "2D vector",
+            "definition": "A two-dimensional vector, a common data type in rasterization algorithms, 2D computer graphics, graphical user interface libraries."
+        },
+        {
+            "term": "2.5D",
+            "definition": "Also pseudo 3D. Rendering whose result looks 3D while actually not being 3D or having great limitations, e.g. in camera degrees of freedom."
+        },
+        {
+            "term": "3D graphics pipeline",
+            "definition": "A graphics pipeline taking 3D models and producing a 2D bitmap image result."
+        },
+        {
+            "term": "3D paint tool",
+            "definition": "A 3D graphics application for digital painting of multiple texture map image channels directly onto a rotated 3D model, such as zbrush or mudbox, also sometimes able to modify vertex attributes."
+        },
+        {
+            "term": "3D scene",
+            "definition": "A collection of 3D models and lightsources in world space, into which a camera may be placed, describing a scene for 3D rendering."
+        },
+        {
+            "term": "3D unit vector",
+            "definition": "A unit vector in 3D space."
+        },
+        {
+            "term": "4D vector",
+            "definition": "A common datatype in graphics code, holding homogeneous coordinates or RGBA data, or simply a 3D vector with unused W to benefit from alignment, naturally handled by machines with 4-element SIMD registers."
+        },
+        {
+            "term": "4\u00d74 matrix",
+            "definition": "A matrix commonly used as a transformation of homogeneous coordinates in 3D graphics pipelines.[1]"
+        },
+        {
+            "term": "7e3 format",
+            "definition": "A packed pixel format supported by some graphics processing units (GPUs) where a single 32-bit word encodes three 10-bit floating point color channels, each with seven bits of mantissa and three bits of exponent.[2]"
+        },
+        {
+            "term": "AABB",
+            "definition": "Axis aligned bounding box (sometimes called \"axis oriented\"), a bounding box stored in world coordinates; one of the simplest bounding volumes."
+        },
+        {
+            "term": "Additive blending",
+            "definition": "A compositing operation where \n\n\n\nd\ns\nt\n=\nd\ns\nt\n+\ns\nr\nc\n,\n\n\n{\\displaystyle dst=dst+src,}\n\n without the use of an alpha channel, used for various effects. Also known as linear dodge in some applications."
+        },
+        {
+            "term": "Affine texture mapping",
+            "definition": "Linear interpolation of texture coordinates in screen space without taking perspective into account, causing texture distortion."
+        },
+        {
+            "term": "Aliasing",
+            "definition": "Unwanted effect arising when sampling high-frequency signals, in computer graphics appearing e.g. when downscaling images. Antialiasing methods can prevent it."
+        },
+        {
+            "term": "Alpha channel",
+            "definition": "An additional image channel (e.g. extending an RGB image) or standalone channel controlling alpha blending."
+        },
+        {
+            "term": "Ambient lighting",
+            "definition": "An approximation to the light entering a region from a wide range of directions, used to avoid needing an exact solution to the rendering equation."
+        },
+        {
+            "term": "Ambient occlusion (AO)",
+            "definition": "Effect approximating, in an inexpensive way, one aspect of global illumination by taking into account how much ambient light is blocked by nearby geometry, adding visual clues about the shape.[3]:\u200a446"
+        },
+        {
+            "term": "Analytic model",
+            "definition": "A mathematical model for a phenomenon to be simulated, e.g. some approximation to surface shading. Contrasts with Empirical models based purely on recorded data."
+        },
+        {
+            "term": "Anisotropic filtering",
+            "definition": "Advanced texture filtering improving on Mipmapping, preventing aliasing while reducing blur in textured polygons at oblique angles to the camera."
+        },
+        {
+            "term": "Anti-aliasing",
+            "definition": "Methods for filtering and sampling to avoid visual artefacts associated with the uniform pixel grid in 3D rendering."
+        },
+        {
+            "term": "Array texture",
+            "definition": "A form of texture map containing an array of 2D texture slices selectable by a 3rd 'W' texture coordinate; used to reduce state changes in 3D rendering.[4]"
+        },
+        {
+            "term": "Augmented reality",
+            "definition": "Computer-rendered content inserted into the user's view of the real world.[3]:\u200a917"
+        },
+        {
+            "term": "AZDO",
+            "definition": "Approaching zero driver overhead, a set of techniques aimed at reducing the CPU overhead in preparing and submitting rendering commands in the OpenGL pipeline. A compromise between the traditional GL API and other high-performance low-level rendering APIs.[5]"
+        },
+        {
+            "term": "Back-face culling",
+            "definition": "Culling (discarding) of polygons that are facing backwards from the camera."
+        },
+        {
+            "term": "Baking",
+            "definition": "Performing an expensive calculation offline,  and caching the results in a Texture map or Vertex attributes. Typically used for generating lightmaps, normal maps, or low level of detail models.[6]"
+        },
+        {
+            "term": "Barycentric coordinates",
+            "definition": "Three-element coordinates of a point inside a triangle."
+        },
+        {
+            "term": "Beam tracing",
+            "definition": "Modification of ray tracing which instead of lines uses pyramid-shaped beams to address some of the shortcomings of traditional ray tracing, such as aliasing.[7]"
+        },
+        {
+            "term": "Bicubic interpolation",
+            "definition": "Extension of cubic interpolation to 2D, commonly used when scaling textures."
+        },
+        {
+            "term": "Bilinear interpolation",
+            "definition": "Linear interpolation extended to 2D, commonly used when scaling textures."
+        },
+        {
+            "term": "Binding",
+            "definition": "Selecting a resource (texture, buffer, etc.) to be referenced by future commands."
+        },
+        {
+            "term": "Billboard",
+            "definition": "A textured rectangle that keeps itself oriented towards the camera, typically used e.g. for vegetation or particle effects.[3]:\u200a551"
+        },
+        {
+            "term": "Binary space partitioning (BSP)",
+            "definition": "A data structure that can be used to accelerate visibility determination, used e.g. in Doom engine."
+        },
+        {
+            "term": "Bit depth",
+            "definition": "The number of bits per pixel, sample, or texel in a bitmap image (holding one or mode image channels, typical values being 4,\u00a08,\u00a016,\u00a024,\u00a032)"
+        },
+        {
+            "term": "Bitmap",
+            "definition": "Image stored by pixels."
+        },
+        {
+            "term": "Bit plane",
+            "definition": "A format for bitmap images storing 1 bit per pixel in a contiguous 2D array; Several such parallel arrays combine to produce the a higher bit depth image. Opposite of packed pixel format."
+        },
+        {
+            "term": "Blend operation",
+            "definition": "A render state controlling alpha blending, describing a formula for combining source and destination pixels."
+        },
+        {
+            "term": "Bone",
+            "definition": "Coordinate systems used to control surface deformation (via Weight maps) during Skeletal animation. Typically stored in a hierarchy, controlled by keyframes, and other procedural constraints."
+        },
+        {
+            "term": "Bounding box",
+            "definition": "One of the simplest type of bounding volume, consisting of axis aligned or object aligned extents."
+        },
+        {
+            "term": "Bounding volume",
+            "definition": "A mathematically simple volume, such as a sphere or a box, containing 3D objects, used to simplify and accelerate spatial tests (e.g. for visibility or collisions).[3]:\u200a819"
+        },
+        {
+            "term": "BRDF",
+            "definition": "Bidirectional reflectance distribution functions (BRDFs), empirical models defining 4D functions for surface shading indexed by a view vector and light vector relative to a surface.[8]"
+        },
+        {
+            "term": "Bump mapping",
+            "definition": "Technique similar to normal mapping that instead of normal maps uses so called bump maps (height maps)."
+        },
+        {
+            "term": "BVH",
+            "definition": "Bounding volume hierarchy is a tree structure on a set of geometric objects."
+        },
+        {
+            "term": "Camera",
+            "definition": "A virtual camera from which rendering is performed, also sometimes referred to as 'eye'."
+        },
+        {
+            "term": "Camera space",
+            "definition": "A space with the camera at the origin, aligned with the viewer's direction, after the application of the world transformation and view transformation."
+        },
+        {
+            "term": "Cel shading",
+            "definition": "Cartoon-like shading effect."
+        },
+        {
+            "term": "Clipping",
+            "definition": "Limiting specific operations to a specific region, usually the view frustum."
+        },
+        {
+            "term": "Clip plane",
+            "definition": "A plane used to clip rendering primitives in a graphics pipeline. These may define the View frustum or be used for other effects."
+        },
+        {
+            "term": "Clip space",
+            "definition": "Coordinate space in which clipping is performed."
+        },
+        {
+            "term": "Clip window",
+            "definition": "A rectangular region in screen space, used during clipping. A clip window may be used to enclose a region around a portal in portal rendering."
+        },
+        {
+            "term": "CLUT",
+            "definition": "A table of RGB color values to be indexed by a lower bit depth image (typically 4-8bits), a form of vector quantisation."
+        },
+        {
+            "term": "Color bleeding",
+            "definition": "Unwanted effect in texture mapping. A color from a border of unmapped region of the texture may appear (bleed) in the mapped result due to interpolation."
+        },
+        {
+            "term": "Color channels",
+            "definition": "The set of channels in a bitmap image representing the visible color components, i.e. distinct from the alpha channel or other information."
+        },
+        {
+            "term": "Color resolution",
+            "definition": "A region of memory holding a set of instructions for a graphics processing unit for rendering a scene or portion of a scene. These may be generated manually in bare metal programming, or managed by low level rendering APIs, or handled internally by high level rendering APIs."
+        },
+        {
+            "term": "Command buffer",
+            "definition": "A region of memory holding a set of instructions for a graphics processing unit for rendering a scene or portion of a scene. These may be generated manually in bare metal programming, or managed by low level rendering APIs, or handled internally by high level rendering APIs."
+        },
+        {
+            "term": "Command list",
+            "definition": "A group of rendering commands ready for submission to a graphics processing unit, see also Command buffer."
+        },
+        {
+            "term": "Compute API",
+            "definition": "An API for efficiently processing large amounts of data.[9]"
+        },
+        {
+            "term": "Compute shader",
+            "definition": "A compute kernel managed by a rendering API, with easy access to rendering resources."
+        },
+        {
+            "term": "Cone tracing",
+            "definition": "Modification of ray tracing which instead of lines uses cones as rays in order to achieve e.g. antialiasing or soft shadows.[10]"
+        },
+        {
+            "term": "Connectivity information",
+            "definition": "Indices defining [rendering primitive]s between vertices, possibly held in index buffers. describes geometry as a graph or hypergraph."
+        },
+        {
+            "term": "CSG",
+            "definition": "Constructive solid geometry, a method for generating complex solid models from boolean operations combining simpler modelling primitives."
+        },
+        {
+            "term": "Cube mapping",
+            "definition": "A form of environment reflection mapping in which the environment is captured on a surface of a cube (cube map)."
+        },
+        {
+            "term": "Culling",
+            "definition": "Before rendering begins, culling removes objects that don't significantly contribute to the rendered result (e.g. being obscured or outside camera view).[3]:\u200a830"
+        },
+        {
+            "term": "Decal",
+            "definition": "A \"sticker\" picture applied onto a surface (e.g. a crack on the wall).[3]:\u200a888"
+        },
+        {
+            "term": "Detail texture",
+            "definition": "Texture maps repeated at high frequency combined with a main texture on a surface to prevent a blurred appearance close to the camera."
+        },
+        {
+            "term": "Deferred shading",
+            "definition": "A technique by which computation of shading is deferred to later stage by rendering in two passes, potentially increasing performance by not discarding expensively shaded pixels. The first pass only captures surface parameters (such as depth, normals and material parameters), the second one performs the actual shading and computes the final colors.[3]:\u200a884"
+        },
+        {
+            "term": "Deformation lattice",
+            "definition": "A means of controlling free-form deformation via a regular 3D grid of control points moved to arbitrary positions, with polynomial interpolation of the space between them."
+        },
+        {
+            "term": "Degenerate triangles",
+            "definition": "Zero area triangle primitives placed in a triangle strip between actual primitives, to allow many parts of a triangle mesh to be rendered in a single drawcall. These are rejected by the triangle setup unit.[11]"
+        },
+        {
+            "term": "Delaunay triangulation",
+            "definition": "A method for generating an efficient triangulating between a set of vertices in a plane."
+        },
+        {
+            "term": "Depth buffer",
+            "definition": "A bitmap image holding depth values (either a Z buffer or a W buffer), used for visible surface determination, during rasterization of 3D scenes"
+        },
+        {
+            "term": "Depth map",
+            "definition": "A bitmap image or texture map holding depth values. Similar to a height map or displacement map, but usually associated with a projection."
+        },
+        {
+            "term": "Depth value",
+            "definition": "A value in a depth map representing a distance perpendicular to the space of an image."
+        },
+        {
+            "term": "Diffuse lighting",
+            "definition": "In shading, a diffuse component of light is the light reflected from the surface uniformly into all directions. This component depends on the surface normal and direction to the light source but not on the viewer's position."
+        },
+        {
+            "term": "Direct3D",
+            "definition": "Microsoft Windows 3D API, with similar architecture to OpenGL."
+        },
+        {
+            "term": "Displacement mapping",
+            "definition": "a method for adding detail to surfaces by subdivision and displacement of the resulting vertices form a height map.[12]"
+        },
+        {
+            "term": "Distributed ray tracing",
+            "definition": "Modification of ray tracing that casts multiple rays through each pixel in order to model soft phenomena such as soft shadows, depth of field etc."
+        },
+        {
+            "term": "Double buffering",
+            "definition": "Using a dedicated buffer for rendering and copying the result to the screen buffer when finished. This prevents stutter on the screen and the user seeing rendering in progress."
+        },
+        {
+            "term": "Drawcall",
+            "definition": "A single rendering command submitted to a rendering API, referring to a single set of render states."
+        },
+        {
+            "term": "Edge vector",
+            "definition": "A vector between 2 position vertices in a polygon or polygon mesh, along an edge."
+        },
+        {
+            "term": "Environment mapping",
+            "definition": "Also reflection mapping, a technique of approximating reflections of environment on complex surfaces of 3D models in real time. A complete 360 degree view of environment needs to be prerendered and stored in a texture using a specific mapping (e.g. cube mapping, sphere mapping etc.)"
+        },
+        {
+            "term": "Extents",
+            "definition": "The minimum and maximum values of an object or primitive along a coordinate axis or set of axes."
+        },
+        {
+            "term": "Fixed-function pipeline",
+            "definition": "A hardware rendering pipeline without shaders, composed entirely of fixed-function units. A limited number of functions may be controlled by render states."
+        },
+        {
+            "term": "Fixed-function unit",
+            "definition": "A piece of hardware in a graphics processing unit implementing a specific function (such as triangle setup or texture sampling), without programmable control by shaders."
+        },
+        {
+            "term": "Flat shading",
+            "definition": "Shading that assigns a uniform color to each face of a 3D model, giving it a \"sharp-edge\" look."
+        },
+        {
+            "term": "Forward rendering",
+            "definition": "A term for traditional 3D rendering pipelines which sort lightsources applicable to 3D models in world space prior to rasterization. Contrasts with Deferred shading."
+        },
+        {
+            "term": "Forward-plus rendering",
+            "definition": "An extension of forward rendering using compute shaders to place lightsources into screen space tiles, to accelerate the use of many lightsources, bypassing some of the disadvantages of deferred shading.[13]"
+        },
+        {
+            "term": "Fractal",
+            "definition": "A complex, self-similar shape described by a simple equation. Fractals can be used e.g. in procedural terrain generation.[citation needed]"
+        },
+        {
+            "term": "Fragment (pixel) shader",
+            "definition": "Shader processing individual pixels or fragments (values that may potentially become pixels)."
+        },
+        {
+            "term": "Frustum culling",
+            "definition": "A stage in a rendering pipeline, filtering out 3D models whose bounding volumes fail an intersection test with the view frustum, allowing trivial rejection."
+        },
+        {
+            "term": "Fresnel",
+            "definition": "According to Fresnel equations, surfaces show more specular reflections when viewed at near-grazing incidence. This effect is often simulated in computer graphics."
+        },
+        {
+            "term": "FXAA",
+            "definition": "An approximate antialiasing method performed in a post-processing step which smooths the image in screen space, guided by edge detection (contrasting with the usual supersampling approaches that require larger frame-buffers)."
+        },
+        {
+            "term": "Geometry",
+            "definition": "Typically used to refer to vertex & rendering primitive connectivity information (distinct from materials and textures).[3]:\u200a47"
+        },
+        {
+            "term": "Geometry shader",
+            "definition": "In APIs such as OpenGL and Direct3D, geometry shader is an optional stage able to process 3D model geometry in more advanced ways than a vertex or tessellation shaders (e.g. turn primitives into other primitives)."
+        },
+        {
+            "term": "G-buffer",
+            "definition": "A screen space representation of geometry and material information, generated by an intermediate rendering pass in deferred shading rendering pipelines.[14]"
+        },
+        {
+            "term": "Global illumination",
+            "definition": "Computing the global interactions of light within the scene, e.g. reflections of light from one object to another, by which realism is added."
+        },
+        {
+            "term": "Gouraud shading",
+            "definition": "Shading technique that computes values at triangle vertices and interpolates them across the surface. This is more realistic and computationally expensive than flat shading, and less than Phong shading."
+        },
+        {
+            "term": "Graphics processing unit",
+            "definition": "Hardware used to accelerate graphical computations."
+        },
+        {
+            "term": "Graphical shader",
+            "definition": "A shader associated with the rendering pipeline; not a compute shader."
+        },
+        {
+            "term": "Grid cell index",
+            "definition": "Integer coordinates in a multidimensional array."
+        },
+        {
+            "term": "HDR",
+            "definition": "High dynamic range imaging, an image format using floating-point values. Allows additional realism with post processing."
+        },
+        {
+            "term": "Heightmap",
+            "definition": "A 2D array or texture map holding height values; typically used for defining landscapes, or for displacement mapping"
+        },
+        {
+            "term": "Homogeneous coordinates",
+            "definition": "Coordinates of form (x,y,z,w) used during matrix transforms of vertices, allowing to perform non-linear transforms such as the perspective transform."
+        },
+        {
+            "term": "Image channel",
+            "definition": "A single component (referred to as a channel) of a bitmap image; one of multiple components per pixel, e.g. for RGB or YUV color space, or additional channels for alpha blending"
+        },
+        {
+            "term": "Image format",
+            "definition": "A specific way of representing a bitmap image in memory, also refers to image file formats."
+        },
+        {
+            "term": "Image generation",
+            "definition": "Synonymous with rendering; taking a 3D scene (or other form of encoded data) and producing a bitmap image result."
+        },
+        {
+            "term": "Image generator",
+            "definition": "A hardware accelerator for image generation, almost synonymous with a graphics processing unit, but historically used to refer to devices aimed at realtime rendering for simulation (e.g. Evans & Sutherland ESIG line)."
+        },
+        {
+            "term": "Image order rendering",
+            "definition": "Rendering methods that iterate over pixels of the screen in order to draw the image (e.g. raytracing)."
+        },
+        {
+            "term": "Image plane",
+            "definition": "The plane in the world which is identified with the plane of the display monitor used to view the image that is being rendered."
+        },
+        {
+            "term": "Immediate mode rendering",
+            "definition": "The submission of rendering commands and rendering primitive data without the extensive use of managed resources; rendering primitive vertex attribute data may be embedded directly into a command list, rather than referenced indirectly from resources."
+        },
+        {
+            "term": "Impostor",
+            "definition": "A dynamically rendered Billboard texture map used to stand in for geometry in the distance. A form of level of detail optimization.[15]"
+        },
+        {
+            "term": "Incremental error algorithm",
+            "definition": "A set of rasterization algorithms which use simple integer arithmetic to update an error term that determines if another quantity is incremented, avoiding the need for expensive division or multiplication operations; e.g. bresenham's line algorithm, or rasterizing heightmap landscapes.[16]"
+        },
+        {
+            "term": "Index buffer",
+            "definition": "A rendering resource used to define rendering primitive connectivity information between vertices."
+        },
+        {
+            "term": "Indirect illumination",
+            "definition": "Another term for global illumination."
+        },
+        {
+            "term": "Instancing",
+            "definition": "Rendering multiple objects (instances) using the same geometry data."
+        },
+        {
+            "term": "Intersection test",
+            "definition": "Determining if two pieces of geometry intersect, commonly required in simulation, rendering pipelines, and 3D modelling applications."
+        },
+        {
+            "term": "K-DOP",
+            "definition": "A type of bounding volume used for fast intersection tests; a discrete oriented polytope (DOP). These generalise bounding boxes with extents additional discrete planes (e.g. diagonals formed by each pair of coordinate axes, etc.)."
+        },
+        {
+            "term": "Level of detail (LOD)",
+            "definition": "If an object contributes less to the rendered result, e.g. by being far away from the camera, LOD chooses to use a simpler version of the object (e.g. with fewer polygons or textures).[3]:\u200a852"
+        },
+        {
+            "term": "Light probe",
+            "definition": "Object used to capture light parameters at a specific point in space in order to help compute scene lighting.[17]"
+        },
+        {
+            "term": "Low level rendering API",
+            "definition": "A library providing a minimal abstraction layer over a graphics processing unit's raw command lists, such as Vulkan, LibGCM, or Metal (API). The user typically has more control over (and responsibility for) resource management, command buffers, synchronisation issues."
+        },
+        {
+            "term": "Lighting",
+            "definition": "Computations simulating the behavior of light."
+        },
+        {
+            "term": "Light vector",
+            "definition": "In shading calculations, a 3D unit vector representing the direction of incident light onto a model's surface."
+        },
+        {
+            "term": "Light field",
+            "definition": "A data structure approximating the 4D flux  of light rays through a space (or in the general case, 5D); it may be captured using multiple cameras (e.g. light stage), or rendered from a 3D model by ray tracing."
+        },
+        {
+            "term": "Line primitive",
+            "definition": "A rendering primitive or modelling primitive representing a line segment, used for wireframes."
+        },
+        {
+            "term": "Lumels",
+            "definition": "A term for texels in the texture map representing a lightmap."
+        },
+        {
+            "term": "Manhattan distance",
+            "definition": "Measure of distance between two points, different from Euclidean distance, that sums the distances along principal axes."
+        },
+        {
+            "term": "Marching cubes",
+            "definition": "A method for triangulating implicit surfaces."
+        },
+        {
+            "term": "MegaTexturing",
+            "definition": "Texturing technique that works with extremely large textures which are not loaded into memory all at once, but rather streamed from the hard disk depending on the camera view.[18]:\u200a176"
+        },
+        {
+            "term": "Microtexture",
+            "definition": "An alternative term sometimes used for Detail textures."
+        },
+        {
+            "term": "Mipmap",
+            "definition": "Method of preventing aliasing by storing differently scaled versions of the same image and using the correct one during rendering."
+        },
+        {
+            "term": "Modelling primitive",
+            "definition": "Basic elements from which 3D models and 3D scenes are composed. Also known as a Geometric primitive."
+        },
+        {
+            "term": "Model space",
+            "definition": "Coordinate system in which a 3D model is created and stored."
+        },
+        {
+            "term": "Model transformation matrix",
+            "definition": "A transformation matrix producing world coordinates from a 3D model's local coordinates."
+        },
+        {
+            "term": "Multiply blend",
+            "definition": "A blending operation used for lightmaps, \n\n\n\nd\ns\nt\n=\nd\ns\nt\n\u2217\ns\nr\nc\n.\n\n\n{\\displaystyle dst=dst*src.}"
+        },
+        {
+            "term": "Near clipping",
+            "definition": "The clipping of 3D rendering primitives against the near clip plane. Necessary to correctly display rendering primitives that partially pass behind the camera."
+        },
+        {
+            "term": "Nearest-neighbor interpolation",
+            "definition": "Simplest form of interpolation that for given position outputs the color of the nearest sample."
+        },
+        {
+            "term": "Noise",
+            "definition": "In real world data a noise is an unwanted distortion of the captured signal, e.g. in photography. In rendering, artificial noise, such as white noise or Perlin noise, is often generated and added on purpose to add realism."
+        },
+        {
+            "term": "Normal mapping",
+            "definition": "Method of adding detail to the surface of 3D models, without increasing geometry complexity, by using a texture with precomputed normals that are used during shading."
+        },
+        {
+            "term": "OBJ format",
+            "definition": "A common 3D file format."
+        },
+        {
+            "term": "Object order rendering",
+            "definition": "Rendering methods that iterate over objects in the scene and draws then one by one (e.g. rasterization)."
+        },
+        {
+            "term": "Occlusion culling",
+            "definition": "Culling (discarding) of objects before rendering that are completely obscured by other objects."
+        },
+        {
+            "term": "Occlusion query",
+            "definition": "A command passed to a graphics processing unit requesting the testing of bounding volume geometry against the depth buffer to determine if any contents in the potentially visible set; used for hardware accelerated occlusion culling."
+        },
+        {
+            "term": "Offline rendering",
+            "definition": "Non-real-time rendering."
+        },
+        {
+            "term": "OOBB",
+            "definition": "An object oriented bounding box (sometimes called object aligned); a bounding box stored in some object's local coordinate system"
+        },
+        {
+            "term": "OpenGL",
+            "definition": "Commonly used 2D and 3D graphics rendering API."
+        },
+        {
+            "term": "Outcode",
+            "definition": "A small integer holding a bit for the result of every plane test (or clip window edge test) failed in clipping. Primitives may be trivially rejected if the bitwise AND of all its vertices outcodes is non zero"
+        },
+        {
+            "term": "Packed pixel format",
+            "definition": "An image format where the image channels are interleaved contiguously in memory, possibly containing multiple channels within single machine words, equivalent to an array of structures for bitmap data. Contrasts with planar image formats."
+        },
+        {
+            "term": "Parallax mapping",
+            "definition": "Shader effect that adds detail with a sense of depth to a 3D surface, in a more realistic way than normal mapping."
+        },
+        {
+            "term": "Parameter gradient",
+            "definition": "The derivative of a vertex attribute with respect to screen space coordinates during rasterization, used for interpolation across a rendering primitive surface."
+        },
+        {
+            "term": "Particle effect",
+            "definition": "Effects consisting of a number of particles that behave by certain rules, typically used to simulate fire, smoke etc.[3]:\u200a567"
+        },
+        {
+            "term": "Path tracing",
+            "definition": "Photorealistic iterative rendering method based on tracing light paths."
+        },
+        {
+            "term": "Perspective correct texturing",
+            "definition": "Non-linear texture coordinate interpolation that takes into account perspective, eliminating distortion seen in affine texture mapping."
+        },
+        {
+            "term": "Phong lighting",
+            "definition": "A commonly used model of local illumination that computes the result as a sum of ambient, diffuse and specular elements of light."
+        },
+        {
+            "term": "Phong shading",
+            "definition": "Shading technique that uses interpolated normals."
+        },
+        {
+            "term": "Photogrammetry",
+            "definition": "Science and technology of making measurement from photographs, e.g. automatically creating 3D models of environment."
+        },
+        {
+            "term": "Photometry",
+            "definition": "Science of measuring light in terms of human perception."
+        },
+        {
+            "term": "Photon mapping",
+            "definition": "Photorealistic rendering algorithm based on tracing rays from the camera as well as light sources, able to simulate effects such as caustics."
+        },
+        {
+            "term": "Physically based rendering (PBR)",
+            "definition": "Rendering algorithms based on physics simulation of light, including conservation of energy, empirical models of surfaces.[19]"
+        },
+        {
+            "term": "Pixel",
+            "definition": "Smallest element of a raster image."
+        },
+        {
+            "term": "Planar image format",
+            "definition": "An image format where the image channels (or even bits) for a single pixel is separated into several parallel arrays, equivalent to a structure of arrays for bitmap data."
+        },
+        {
+            "term": "Point cloud",
+            "definition": "A surface defined by a collection of vertices without connectivity information.[20]"
+        },
+        {
+            "term": "Point sprite",
+            "definition": "A rendering primitive in 3D graphics pipelines, allowing one vertex plus radius to define a billboard; corner vertices are automatically generated. Typically used for particle systems"
+        },
+        {
+            "term": "Polygon mesh",
+            "definition": "A 3D model consisting of vertices connected by polygon primitives."
+        },
+        {
+            "term": "Polygon primitive",
+            "definition": "A rendering or modelling primitive defining a flat surface connecting 3 or more vertices."
+        },
+        {
+            "term": "Portal",
+            "definition": "A means of occlusion culling, defining a visible window between adjacent bounding volumes, used in portal rendering."
+        },
+        {
+            "term": "Post processing",
+            "definition": "Effects applied to a bitmap image in screen space after 3D rendering pipeline, for example tone mapping, some approximations to motion blur, and blooms.[21]"
+        },
+        {
+            "term": "Predicated rendering",
+            "definition": "A feature facilitating occlusion culling within a graphics pipeline, performed by a command list asynchronously form the CPU, where a group of rendering commands are flagged to be conditional on the result of an earlier occlusion query."
+        },
+        {
+            "term": "Premultiplied alpha",
+            "definition": "A variation of a bitmap image or alpha blending calculation in which the RGB color values are assumed to be already multiplied by an alpha channel, to reduce computations during Alpha blending; uses the blend operation: dst *= (1 - alpha) + src; capable of mixing alpha blending with additive blending effects"
+        },
+        {
+            "term": "Primitive",
+            "definition": "A basic unit of geometry for rendering or modelling."
+        },
+        {
+            "term": "Procedural generation",
+            "definition": "Generating data, such as textures, 3D geometry or whole scenes by algorithms (as opposed to manually)."
+        },
+        {
+            "term": "Procedural texture",
+            "definition": "A texture (very often a volume texture) generated procedurally by a mathematical function and with the use of noise functions.[3]:\u200a198"
+        },
+        {
+            "term": "Quaternion",
+            "definition": "A means of representing rotations in a 4D vector, useful for skeletal animation, with advantages for interpolation compared to euler angles (i.e. not suffering from gimbal lock).[22]"
+        },
+        {
+            "term": "Radiometry",
+            "definition": "Measurement of electromagnetic radiation such as light, defining measures such as flux or radiance.[23]:\u200a469"
+        },
+        {
+            "term": "Raster graphics",
+            "definition": "Graphics represented as a rectangular grid of pixels."
+        },
+        {
+            "term": "Rasterisation",
+            "definition": "Converting vector graphics to raster graphics. This terms also denotes a common method of rendering 3D models in real time."
+        },
+        {
+            "term": "Ray casting",
+            "definition": "Rendering by casting non-recursive rays from the camera into the scene. 2D ray casting is a 2.5D rendering method."
+        },
+        {
+            "term": "Ray marching",
+            "definition": "Sampling 3D space at multiple points along a ray, typically used when analytical methods cannot be used.[24]:\u200a157"
+        },
+        {
+            "term": "Ray tracing",
+            "definition": "Recursively tracing paths of light rays through a 3D scene, may be used for 3D rendering (more commonly for offline rendering), or other tests."
+        },
+        {
+            "term": "Recursive subdivision",
+            "definition": "The process of subdividing an object (either geometric object, or a data structure) recursively until some criterion is met."
+        },
+        {
+            "term": "Render mapping",
+            "definition": "The baking of a rendering of a 3D model surface into a texture map to capture surface properties. Also known as 'render surface map'.[25][26]"
+        },
+        {
+            "term": "Render pass",
+            "definition": "A stage in a rendering pipeline generating some (possibly incomplete) representation of the scene."
+        },
+        {
+            "term": "Render states",
+            "definition": "Information controlling a graphics pipeline, composed of modes and parameters, including resource identifiers, and shader bindings."
+        },
+        {
+            "term": "Render target",
+            "definition": "A graphics resource into which rendering primitives are rasterized by a graphics pipeline. Render targets may be frame buffers or texture maps."
+        },
+        {
+            "term": "Render to texture",
+            "definition": "The process of rasterizing into a texture map (or texture buffer) for further use as a resource in subsequent render passes. Used for environment mapping, impostor rendering, shadow mapping and post-processing filters. Requires the ability to use a texture map as a render target."
+        },
+        {
+            "term": "Rendering API",
+            "definition": "A software library for submitting rendering commands, and managing render states and rendering resources. Examples include OpenGL, Direct3D, Vulkan. Provides an abstraction layer for a graphics processing unit."
+        },
+        {
+            "term": "Rendering command",
+            "definition": "An instruction for rasterizing geometry in a 3D graphics pipeline, typically held in a command buffer, or submitted programatically through a rendering API."
+        },
+        {
+            "term": "Rendering equation",
+            "definition": "Mathematical equation used as a model of light behavior in photorealistic rendering."
+        },
+        {
+            "term": "Rendering primitive",
+            "definition": "Geometry that can be drawn by a rasterizer or graphics processing unit, connecting vertices, e.g. points, lines, triangles, quadrilaterals"
+        },
+        {
+            "term": "Rendering resources",
+            "definition": "Data managed by a graphics API, typically held in device memory, including vertex buffers, index buffers, texture maps and framebuffers"
+        },
+        {
+            "term": "Repeating texture",
+            "definition": "A texture map applied with wrap-round UV coordinates extending between the 0-1 range (representing one unit of the image), exhibiting periodicity. Contrasts with clamped, mirrored modes or unique mappings."
+        },
+        {
+            "term": "Resource",
+            "definition": "Data (often held in a buffer managed by a rendering API) read by a graphics pipeline, e.g. texture maps, vertex buffers, shaders, index buffers, or other pieces of 3D model data."
+        },
+        {
+            "term": "RGB888",
+            "definition": "An RGB color value encoded as 8 bits per channel."
+        },
+        {
+            "term": "RGBA",
+            "definition": "An RGB color value together with an alpha channel, typically held in bitmap images or intermediates in shading calculations."
+        },
+        {
+            "term": "RGBA888",
+            "definition": "an RGBA color value encoded as 8 bits per channel"
+        },
+        {
+            "term": "RGB color value",
+            "definition": "A 3D vector describing a color using the RGB color model; may use fixed point or floating-point representations."
+        },
+        {
+            "term": "RGB image",
+            "definition": "A bitmap image holding RGB color values in 3 image channels"
+        },
+        {
+            "term": "Rounding radius",
+            "definition": "A value used in smoothing the corners of a geometric figure such as a 2D polygon or 3D polygon mesh.[27]"
+        },
+        {
+            "term": "Scene graph",
+            "definition": "Data structure commonly used to represent a 3D scene to be rendered as a directed acyclic graph."
+        },
+        {
+            "term": "Screen space",
+            "definition": "The coordinate space of the resulting 2D image during 3D rendering. The result of 3D projection on geometry in camera space."
+        },
+        {
+            "term": "Screen space ambient occlusion (SSAO)",
+            "definition": "Technique of approximating ambient occlusion in screen space."
+        },
+        {
+            "term": "Screen space directional occlusion",
+            "definition": "An enhancement of Screen space ambient occlusion (SSAO) taking direction into account to sample the ambient light, to better approximate global illumination.[28]"
+        },
+        {
+            "term": "Shader",
+            "definition": "A subroutine written in a shading language describing: vertex transformations, skinning, and possibly vertex lighting (in vertex shaders); shading calculations (in pixel shaders); control over tessellation (tessellation shaders); or general purpose computation."
+        },
+        {
+            "term": "Shading calculation",
+            "definition": "Surface lighting and texturing blending operations, e.g. including specularity, bump mapping etc."
+        },
+        {
+            "term": "Shadow buffer",
+            "definition": "A synonym for shadow map."
+        },
+        {
+            "term": "Shadow map",
+            "definition": "A texture buffer holding depth values rendered in a separate render pass from the perspective of a lightsource, used in Shadow mapping; it is typically rendered onto other geometry in the main rendering pass.[29]"
+        },
+        {
+            "term": "Shadow volume",
+            "definition": "One of the techniques of adding shadows to 3D scenes."
+        },
+        {
+            "term": "Signed triangle area",
+            "definition": "Found using half the Z component of cross product of a pair of screen-space triangle edge vectors, useful for backface culling and computing parameter gradients in triangle rasterization."
+        },
+        {
+            "term": "Skybox",
+            "definition": "Method of creating background for a 3D scene by enclosing it in a textured cuboid (or another environment map).[3]:\u200a547"
+        },
+        {
+            "term": "Sliverous triangle",
+            "definition": "A triangle with one or two extremely acute angles, hence a long/thin shape, which has undesirable properties during some interpolation or rasterization processes.[30]"
+        },
+        {
+            "term": "Sliver triangle",
+            "definition": "A triangle with one or two extremely acute angles, hence a long/thin shape, which has undesirable properties during some interpolation or rasterization processes.[30]"
+        },
+        {
+            "term": "Software renderer",
+            "definition": "Rendering software that doesn't use specialized hardware (a GPU) for its computations, i.e. only uses CPU for rendering."
+        },
+        {
+            "term": "Sparse texture",
+            "definition": "A texture that can partially reside in the video memory to reduce video memory usage and loading time."
+        },
+        {
+            "term": "Spatial hashing",
+            "definition": "A form of hashing to accelerate spatial testing e.g. for AI, collision detection, typically using a grid cell index as a key."
+        },
+        {
+            "term": "Specular exponent",
+            "definition": "Controls the glossiness in the phong shading model."
+        },
+        {
+            "term": "Specular highlights",
+            "definition": "In shading, specular highlight is a bright highlight caused by specular reflections, more prominent on metallic surfaces. These highlights depend on the viewer's position as well as the position of the light source and surface normal."
+        },
+        {
+            "term": "Spline",
+            "definition": "A curve defined by polynomial interpolation through control points."
+        },
+        {
+            "term": "Sprite",
+            "definition": "2D image moving on the screen, with potential partial transparency and/or animation.[3]:\u200a550"
+        },
+        {
+            "term": "State changes",
+            "definition": "The passing of changes in render states in a graphics pipeline, incurring a performance overhead. This overhead is typically minimised by scene sorting."
+        },
+        {
+            "term": "Stencil buffer",
+            "definition": "A buffer storing an integer value for each according screen pixel, used e.g. to mask out specific operations and achieve specific effects."
+        },
+        {
+            "term": "Stereo rendering",
+            "definition": "Rendering the view twice separately for each eye in order to present depth."
+        },
+        {
+            "term": "Surface normal vector",
+            "definition": "In shading calculations, the normal to a 3D model surface, typically compared with the light and view vectors to compute the resulting visible colour. Also used for displacement mapping."
+        },
+        {
+            "term": "Swizzled texture",
+            "definition": "A texture map stored out of the natural pixel order; see Swizzling (computer graphics). For example, it may be stored in morton order, giving improved cache coherency for 2D memory access patterns.[31]"
+        },
+        {
+            "term": "Terrain rendering",
+            "definition": "Rendering of landscapes, typically using heightmaps or voxels."
+        },
+        {
+            "term": "Tessellation",
+            "definition": "Converting a general 3D surface into polygonal representation, important because of HW being optimized for rendering polygons.[3]:\u200a683"
+        },
+        {
+            "term": "Texel",
+            "definition": "Texture element, a pixel of a texture."
+        },
+        {
+            "term": "Texture cache",
+            "definition": "A specialised read-only cache in a graphics processing unit for buffering texture map reads, accelerating texture sampling operations."
+        },
+        {
+            "term": "Texture sampling",
+            "definition": "The process of texture lookup with texture filtering. Performed by a texture sampling unit in a graphics processing unit"
+        },
+        {
+            "term": "Texture sampling unit",
+            "definition": "A fixed-function unit performing texture sampling; also known as a texture mapping unit."
+        },
+        {
+            "term": "Texture buffer",
+            "definition": "A region of memory (or resource) used as both a render target and a texture map."
+        },
+        {
+            "term": "Texture map",
+            "definition": "A bitmap image/rendering resource used in texture mapping, applied to 3D models and indexed by UV mapping for 3D rendering."
+        },
+        {
+            "term": "Texture space",
+            "definition": "The coordinate space of a texture map, usually corresponding to UV coordinates in a 3D model. Used for some rendering algorithms such as texture space diffusion"
+        },
+        {
+            "term": "Transform feedback",
+            "definition": "A feature of a rendering pipeline where transformed vertices may be written back to a buffer for later use (e.g. for re-use in additional render passes or subsequent rendering commands), e.g. caching the result of skeletal animation for use in shadow rendering.[32]"
+        },
+        {
+            "term": "Triangulation",
+            "definition": "The process of turning arbitrary geometric models into triangle primitives, suitable for algorithms requiring triangle meshes"
+        },
+        {
+            "term": "Triangle primitive",
+            "definition": "The most common rendering primitive defining triangle meshes, rendered by graphics processing units"
+        },
+        {
+            "term": "Triangle setup",
+            "definition": "The process of ordering triangle primitive vertices, calculating signed triangle area and parameter gradients between vertex attributes as a prerequisite for rasterization.[33]"
+        },
+        {
+            "term": "Triangle setup unit",
+            "definition": "A fixed-function unit in a GPU that performs triangle setup (and may perform backface culling), prior to actual rasterization.[33]"
+        },
+        {
+            "term": "Trilinear filtering",
+            "definition": "Extension of bilinear filtering that additionally linearly interpolates between different Mipmap levels of the texture, eliminating sharp transitions."
+        },
+        {
+            "term": "Triple buffering",
+            "definition": "Improvement of double buffering for extra performance by adding another back buffer."
+        },
+        {
+            "term": "Tristrip",
+            "definition": "A common rendering primitive defining a sequence of adjacent triangle primitives, where each triangle re-uses 2 vertices from the previous one."
+        },
+        {
+            "term": "Trivial accept",
+            "definition": "The process of accepting an entire rendering primitive, 3D model, or bounding volume contents without further tests for clipping or occlusion culling. The opposite of trivial rejection."
+        },
+        {
+            "term": "Trivial rejection",
+            "definition": "Rejecting a rendering primitive or 3D model based on a cheap calculation performed early in a graphics pipeline, (e.g. using outcodes in clipping). The opposite of trivial accept."
+        },
+        {
+            "term": "Unified memory",
+            "definition": "A memory architecture where the CPU and GPU share the same address space, and often the same physical memory. It is common in Intel[34][35] and AMD[36][37] processors with integrated graphics, SoCs and video game consoles. Supported on some discrete GPUs with the use of an MMU."
+        },
+        {
+            "term": "UV coordinates",
+            "definition": "Coordinates in texture space, assigned as vertex attributes and/or calculated in vertex shaders, used for texture lookup, defining the mapping from texture space to a 3D model surface or any rendering primitive."
+        },
+        {
+            "term": "UV unwrapping",
+            "definition": "The process of flattening a 3D model's surface into a flat 2D plane in a contiguous, spatially coherent manner for texture mapping."
+        },
+        {
+            "term": "Vector graphics",
+            "definition": "Graphics represented as a set of geometrical primitives."
+        },
+        {
+            "term": "Vector maths library",
+            "definition": "A library defining mathematical operations on vector spaces used in 3D graphics, concentrating on 3D and 4D vectors, and 4x4 matrices, often with optimised SIMD implementations.[38]"
+        },
+        {
+            "term": "Vertex buffer",
+            "definition": "A rendering resource managed by a rendering API holding vertex data. May be connected by primitive indices to assemble rendering primitives such as triangle strips. Also known as a Vertex buffer object in OpenGL."
+        },
+        {
+            "term": "Vertex cache",
+            "definition": "A specialised read-only cache in a graphics processing unit for buffering indexed vertex buffer reads."
+        },
+        {
+            "term": "Vertex shader",
+            "definition": "Shader processing vertices of a 3D model."
+        },
+        {
+            "term": "View transformation",
+            "definition": "A matrix transforming world space coordinates into camera space."
+        },
+        {
+            "term": "View vector",
+            "definition": "In shading calculations, a 3D unit vector between the camera and the point of interest on a surface."
+        },
+        {
+            "term": "View frustum",
+            "definition": "A truncated pyramid enclosing the subset of 3D space that projects onto a 'viewport' (a rectangular region in screen space, usually the entire screen)."
+        },
+        {
+            "term": "Virtual reality",
+            "definition": "Computer-rendered content that (unlike augmented reality) completely replaces the user's view of the real world.[3]:\u200a915"
+        },
+        {
+            "term": "Volume texture",
+            "definition": "A type of texture map with 3 dimensions."
+        },
+        {
+            "term": "Voxel",
+            "definition": "An extension of pixels into 3 dimensions."
+        },
+        {
+            "term": "VSync",
+            "definition": "Vertical synchronization, synchronizes the rendering rate with the monitor refresh rate in order to prevent displaying only partially updated frame buffer, which is disturbing especially with horizontal camera movement."
+        },
+        {
+            "term": "Vulkan",
+            "definition": "High performance, low level graphics API by Khronos Group."
+        },
+        {
+            "term": "W buffering",
+            "definition": "A depth buffer storing inverse depth values, which has some advantages for interpolation and precision scaling."
+        },
+        {
+            "term": "Weight map",
+            "definition": "A set of Vertex attributes controlling deformation of a 3D model during skeletal animation. Per-vertex weights are assigned to control the influence of multiple bones (achieved by interpolating the transformations from each).[39]"
+        },
+        {
+            "term": "Window",
+            "definition": "A rectangular region of a screen or bitmap image."
+        },
+        {
+            "term": "Wireframe",
+            "definition": "May refer to Wireframe models or wireframe rendering."
+        },
+        {
+            "term": "Wireframe rendering",
+            "definition": "A rendering of a 3D model displaying only edge connectivity; used in 3D modelling applications for greater interactive speed, and clarity for mesh editing."
+        },
+        {
+            "term": "World space",
+            "definition": "The global coordinate system in a 3D scene, reached by applying a model transformation matrix from the objects' local coordinates."
+        },
+        {
+            "term": "Z buffer",
+            "definition": "A 2D array holding depth values in screen space; a component of a framebuffer; used for hidden surface determination."
+        },
+        {
+            "term": "Z order",
+            "definition": "A morton order space filling curve, useful for increasing cache coherency of spatial traversals."
+        },
+        {
+            "term": "Z test culling",
+            "definition": "A form of occlusion culling by testing bounding volumes against a Z buffer; may be performed by a graphics processing unit using occlusion queries."
+        }
+    ]
+}
