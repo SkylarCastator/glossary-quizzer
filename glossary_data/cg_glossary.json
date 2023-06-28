@@ -55,7 +55,7 @@
         },
         {
             "term": "Additive blending",
-            "definition": "A compositing operation where \n\n\n\nd\ns\nt\n=\nd\ns\nt\n+\ns\nr\nc\n,\n\n\n{\\displaystyle dst=dst+src,}\n\n without the use of an alpha channel, used for various effects. Also known as linear dodge in some applications."
+            "definition": "A compositing operation where dst = dst + src, {displaystyle dst=dst+src,} without the use of an alpha channel, used for various effects. Also known as linear dodge in some applications."
         },
         {
             "term": "Affine texture mapping",
@@ -535,7 +535,7 @@
         },
         {
             "term": "Multiply blend",
-            "definition": "A blending operation used for lightmaps, \n\n\n\nd\ns\nt\n=\nd\ns\nt\n\u2217\ns\nr\nc\n.\n\n\n{\\displaystyle dst=dst*src.}"
+            "definition": "A blending operation used for lightmaps, dst = dst \u2217 src. {displaystyle dst=dst*src.}"
         },
         {
             "term": "Near clipping",

@@ -16,7 +16,7 @@ class Application:
         organized_list = {}
         for item in quiz_data_files:
             if ".json" in item:
-                with open(f'glossary_data/{item}', 'r') as json_file:
+                with open(f'{path}/{item}', 'r') as json_file:
                     data = json.load(json_file)
                     organized_list[data["name"]] = item
         return organized_list
@@ -30,8 +30,7 @@ class Application:
         elif selected_option == "Start Quiz":
             self.open_quiz_options("glossary_data")
         elif selected_option == "Load Quiz":
-            print("This feature is in production.")
-            self.open_main_menu()
+            self.load_quiz()
         elif selected_option == "Resume Quiz":
             self.open_quiz_options("temp")
         else:
@@ -47,20 +46,29 @@ class Application:
             terminal_menu = TerminalMenu(quiz_names)
             selected_option_index = terminal_menu.show()
             selected_option = quiz_options[quiz_names[selected_option_index]]
-            self.launch_quiz(selected_option)
+            self.launch_quiz(f'{path}/{selected_option}')
 
-    def launch_quiz(self, selected_quiz):
-        with open(f'glossary_data/{selected_quiz}', 'r') as json_file:
+    def launch_quiz(self, quiz_path):
+        with open(quiz_path, 'r') as json_file:
             data = json.load(json_file)
+            quiz_name = data["name"]
             glossary_terms = data['glossary']
-        quiz = Quiz.Quiz(glossary_terms)
+        quiz = Quiz.Quiz(quiz_name, glossary_terms)
         quiz.generate_definition_question()
 
     def load_quiz(self):
-        url = 'https://en.wikipedia.org/wiki/Glossary_of_computer_science'
+        url = str(input("What is the wikipedia url you want to scrape?"))
+        #url = 'https://en.wikipedia.org/wiki/Glossary_of_computer_science'
         glossary_terms = Scraper.scrape_glossary_terms(url)
-        with open('glossary_data/cs_glossary.json', 'w') as json_file:
-            json.dump({'glossary': glossary_terms}, json_file, indent=4)
+        file_name = url.replace("https://en.wikipedia.org/wiki/", "")
+        with open(f'glossary_data/{file_name}.json', 'w') as json_file:
+            data = {
+                "name": file_name,
+                'glossary': glossary_terms
+            }
+            json.dump(data, json_file, indent=4)
+        print(f"Scraping Finished for {file_name}")
+        self.open_main_menu()
 
 
 if __name__ == "__main__":
