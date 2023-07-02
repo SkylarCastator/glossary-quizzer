@@ -1,0 +1,21 @@
+{
+    "name": "Example Quiz",
+    "glossary": [
+        {
+            "term": "A",
+            "definition": "Answer A"
+        },
+        {
+            "term": "B",
+            "definition": "Answer B"
+        },
+        {
+            "term": "C",
+            "definition": "Answer C"
+        },
+        {
+            "term": "D",
+            "definition": "Answer D"
+        }
+    ]
+}

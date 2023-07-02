@@ -5,27 +5,31 @@ import pyfiglet
 
 
 class Quiz:
-    def __init__(self, name, glossary_terms):
+    def __init__(self, main, name, glossary_terms):
+        self.main = main
         self.name = name
         print(f"{name} Quiz")
         print(f"The Quiz contains {len(glossary_terms)} items.\n")
         self.question_num = 1
-        self.original_set = glossary_terms
+        self.original_set = glossary_terms.copy()
         self.quiz_set = glossary_terms
         self.correct_answers = []
         self.incorrect_answers = []
 
     def generate_definition_question(self):
-        random_term = random.choice(self.quiz_set)
-        question = f"Given the definition, what is the correct term? \n {random_term['definition']}"
-        answer = random_term['term']
-        options = self.generate_term_options(answer)
-        selected_option = self.prompt_question(question, options)
-        self.check_answer(selected_option, answer, random_term)
-        self.quiz_set.remove(random_term)
-        self.question_num += 1
-        self.active_quiz_data()
-        self.question_menu()
+        if len(self.quiz_set) > 0:
+            random_term = random.choice(self.quiz_set)
+            question = f"Given the definition, what is the correct term? \n {random_term['definition']}"
+            answer = random_term['term']
+            options = self.generate_term_options(answer)
+            selected_option = self.prompt_question(question, options)
+            self.check_answer(selected_option, answer, random_term)
+            self.quiz_set.remove(random_term)
+            self.question_num += 1
+            self.active_quiz_data()
+            self.question_menu()
+        else:
+            self.show_quiz_results()
 
     def prompt_question(self, question, options):
         print(f"{self.question_num}. {question} \n")
@@ -46,8 +50,7 @@ class Quiz:
 
     def generate_term_options(self, correct_option):
         options = [correct_option]
-
-        # Generate three incorrect options randomly from other glossary terms
+        print(len(self.original_set))
         while len(options) < 4:
             random_term = random.choice(self.original_set)
             random_definition = random_term['term']
@@ -68,11 +71,31 @@ class Quiz:
         else:
             self.generate_definition_question()
 
+    def show_quiz_results(self):
+        with open(f'temp/{self.name}.json', 'r') as json_file:
+            data = json.load(json_file)
+        print(f"You just finished the {self.name} quiz!")
+        correct = len(data["correct"])
+        total_questions = len(data["original"])
+        score = int((correct/total_questions) * 100.0)
+        print(f"You Scored : {score}% or got {correct}/{total_questions} correct!")
+        print(f"Access your test results using this file : temp/{self.name}.json\n")
+        options = ["Main Menu", "Quit"]
+        terminal_menu = TerminalMenu(options)
+        selected_option_index = terminal_menu.show()
+        selected_option = options[selected_option_index]
+        if selected_option == "Quit":
+            exit()
+        else:
+            self.main.open_main_menu()
+
     def active_quiz_data(self):
         quiz_data = {
             "name": self.name,
             "glossary": self.quiz_set,
-            "questions_incorrectly_answered": self.incorrect_answers
+            "original": self.original_set,
+            "incorrect": self.incorrect_answers,
+            "correct": self.correct_answers
         }
         with open(f'temp/{self.name}.json', 'w') as json_file:
             json.dump(quiz_data, json_file, indent=4)
