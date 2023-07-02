@@ -50,7 +50,6 @@ class Quiz:
 
     def generate_term_options(self, correct_option):
         options = [correct_option]
-        print(len(self.original_set))
         while len(options) < 4:
             random_term = random.choice(self.original_set)
             random_definition = random_term['term']
