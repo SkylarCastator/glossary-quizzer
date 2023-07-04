@@ -1,7 +1,6 @@
 import random
 import json
-from simple_term_menu import TerminalMenu
-import pyfiglet
+import dropdownmenu
 
 
 class Quiz:
@@ -33,9 +32,7 @@ class Quiz:
 
     def prompt_question(self, question, options):
         print(f"{self.question_num}. {question} \n")
-        terminal_menu = TerminalMenu(options)
-        selected_option_index = terminal_menu.show()
-        selected_option = options[selected_option_index]
+        selected_option = dropdownmenu.dropdown_menu(options)
         return selected_option
 
     def check_answer(self, selected_option, answer, question):
@@ -62,9 +59,7 @@ class Quiz:
 
     def question_menu(self):
         options = ["Continue", "Quit"]
-        terminal_menu = TerminalMenu(options)
-        selected_option_index = terminal_menu.show()
-        selected_option = options[selected_option_index]
+        selected_option = dropdownmenu.dropdown_menu(options)
         if selected_option == "Quit":
             exit()
         else:
@@ -80,9 +75,7 @@ class Quiz:
         print(f"You Scored : {score}% or got {correct}/{total_questions} correct!")
         print(f"Access your test results using this file : temp/{self.name}.json\n")
         options = ["Main Menu", "Quit"]
-        terminal_menu = TerminalMenu(options)
-        selected_option_index = terminal_menu.show()
-        selected_option = options[selected_option_index]
+        selected_option = dropdownmenu.dropdown_menu(options)
         if selected_option == "Quit":
             exit()
         else:

@@ -2,7 +2,7 @@ import json
 import pyfiglet
 import os
 import quiz as Quiz
-from simple_term_menu import TerminalMenu
+import dropdownmenu
 import glossary_scaper as Scraper
 import validators
 
@@ -23,9 +23,7 @@ class Application:
         return organized_list
 
     def open_main_menu(self):
-        terminal_menu = TerminalMenu(self.main_menu_options)
-        selected_option_index = terminal_menu.show()
-        selected_option = self.main_menu_options[selected_option_index]
+        selected_option = dropdownmenu.dropdown_menu(self.main_menu_options)
         if selected_option == "Quit":
             exit()
         elif selected_option == "Start Quiz":
@@ -45,11 +43,9 @@ class Application:
             self.open_main_menu()
         else:
             quiz_names.append("Back")
-            terminal_menu = TerminalMenu(quiz_names)
-            selected_option_index = terminal_menu.show()
-            name_of_quiz = quiz_names[selected_option_index]
-            if name_of_quiz != "Back":
-                selected_option = quiz_options[name_of_quiz]
+            selected_option = dropdownmenu.dropdown_menu(quiz_names)
+            if selected_option != "Back":
+                selected_option = quiz_options[selected_option]
                 self.launch_quiz(f'{path}/{selected_option}')
             else:
                 self.open_main_menu()
